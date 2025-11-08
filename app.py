@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, session, redirect, url_for
 import random
-
+#this is a project
 app = Flask(__name__)
 app.secret_key = "secret123"  # required for session management
 

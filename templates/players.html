@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Players Data 🎯</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Player Statistics</h1>
+        <table border="1" cellpadding="10" style="margin:auto; background:white; color:black;">
+            <tr>
+                <th>Name</th>
+                <th>Attempts</th>
+                <th>Date & Time</th>
+            </tr>
+            {% for name, attempts, time in players %}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ attempts }}</td>
+                <td>{{ time }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="{{ url_for('index') }}" class="reset-btn">⬅ Back to Game</a>
+    </div>
+</body>
+</html>

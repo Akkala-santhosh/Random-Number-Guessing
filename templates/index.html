@@ -11,18 +11,21 @@
         <h1>🎯 Number Guessing Game</h1>
         <p>Guess a number between <strong>1 and 10</strong></p>
 
-        <form method="POST">
-            <input type="number" name="guess" placeholder="Enter your guess" required>
-            <button type="submit">Guess</button>
-        </form>
+    <form method="POST">
+        <input type="text" name="player_name" placeholder="Enter your name" required>
+        <input type="number" name="guess" placeholder="Enter your guess" required>
+        <button type="submit">Guess</button>
+    </form>
 
         {% if message %}
-            <p class="message">{{ message }}</p>
+        <p class="message">{{ message }}</p>
         {% endif %}
 
         <p>Attempts: {{ attempts }}</p>
 
         <a href="{{ url_for('reset') }}" class="reset-btn">Play Again 🔁</a>
+        <a href="{{ url_for('show_players') }}" class="reset-btn">View Players 📊</a>
+
     </div>
 </body>
 </html>
